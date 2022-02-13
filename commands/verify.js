@@ -25,6 +25,8 @@ module.exports = {
 			if(branch === '0101' || branch === '0102' || branch === '0103' || branch === '0104' || branch === '1016' || branch === '0117' || branch === '0118')
 				await interaction.member.roles.add('921492490157162587');
 			
+			if(!years[year]) 
+				break;
 			await interaction.member.roles.add(years[year]);
 			await interaction.member.roles.add(branch_list[branch]);
 			await interaction.reply({content: `Successfully verified! Welcome to IGDTUW! \n  Your roll number: ${roll} \n Your Branch: <@&${branch_list[branch]}> \n Your Year of joining: ${year}`, ephemeral: true});
