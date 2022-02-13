@@ -29,12 +29,12 @@ module.exports = {
 				break;
 			await interaction.member.roles.add(years[year]);
 			await interaction.member.roles.add(branch_list[branch]);
-			await interaction.reply({content: `Successfully verified! Welcome to IGDTUW! \n  Your roll number: ${roll} \n Your Branch: <@&${branch_list[branch]}> \n Your Year of joining: ${year}`, ephemeral: true});
-			await interaction.followUp({content: `${interaction.user.tag} has been verified.`});
+			await interaction.reply({content: `${interaction.user.tag} has been verified.`});
+			await interaction.followUp({content: `Successfully verified! Welcome to IGDTUW! \n  Your roll number: ${roll} \n Your Branch: <@&${branch_list[branch]}> \n Your Year of joining: ${year}`, ephemeral: true});
 
 			return;
 		}
-		await interaction.reply({content: 'Invalid roll number. Are you sure you are a student of IGDTUW? If yes, then contact <@&921485871750987848>s', ephemeral: true});
-		await interaction.followUp({content: `${interaction.user.tag} could not be verified.`});
+		await interaction.reply({content: `${interaction.user.tag} could not be verified.`});
+		await interaction.followUp({content: 'Invalid roll number. Are you sure you are a student of IGDTUW? If yes, then contact <@&921485871750987848>s', ephemeral: true});
 	},
 };
